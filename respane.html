@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respane</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+
+<!-- onmouseover="console.log(event.target.className)" -->
+
+<body>
+    <div id="search-bar-container">
+        <div class="input-container">
+            <input type="text" id="search-box">
+            <button class="btn primary" onclick="setUrl(event)">
+                Search
+            </button>
+            <button id="show-add-pane-popup" class="btn primary" onclick="showPopup('add-pane-popup')">
+                Add Pane
+            </button>
+            <input type="range" id="pane-scale-slider" onchange="scale(this.value)">
+        </div>
+    </div>
+    <div id="main-container">
+        <div id="pane-container">
+            <div id="pane-container-children">
+            </div>
+        </div>
+    </div>
+    <div class="add-pane-popup popup hidden" onclick="hidePopup('add-pane-popup')">
+        <div style="background-color: whitesmoke; padding: 1em;" onclick="stopPropagation(event)">
+            <select name="Screen Sizes" id="screen-sizes">
+            </select>
+            <button class="btn primary" id="add-pane-button"
+                onclick="createPane('add-pane-popup'); hidePopup('add-pane-popup')">
+                Add Pane
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+.custom-html-business-type-selection {
+  width: 80%;
+  display: flex;
+}
+
+.custom-html-image-container {
+  width: 50%;
+}
+
+.custom-html-selection-image {
+  width: 100%;
+}
+
+.custom-html-text-container {
+  font-family: inherit;
+}

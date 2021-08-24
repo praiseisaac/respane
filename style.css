@@ -1,0 +1,160 @@
+:root {
+  --font-size: 16px;
+  --nav-bar-height: 50px;
+  --button-primary: rgb(193, 100, 100);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#search-bar-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  height: var(--nav-bar-height);
+  align-items: center;
+  background-color: cornflowerblue;
+  padding-left: 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+}
+
+.input-container > input {
+  margin-right: 1em;
+  height: 2rem;
+  padding: 0 0.5em;
+}
+
+input,
+select,
+button {
+  height: 2rem;
+  border: none;
+  border-radius: 0.2em;
+  padding: 0 0.5em;
+  border-width: 0.1em;
+  transition: all 0.25s;
+}
+
+button {
+  min-width: max-content;
+}
+
+button.primary {
+  background-color: lightcoral;
+}
+
+button.primary:hover {
+  background-color: rgb(193, 100, 100);
+  color: white;
+}
+
+button:active {
+  background-color: rgb(193, 100, 100);
+  border-width: 0.5em;
+  box-shadow: 0px 0px 3px 3px rgb(234, 177, 177);
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+/* input, select, button {
+  height: 1.5rem;
+  border: solid black 0.1em;
+  border-radius: 0.2em;
+} */
+
+body {
+  margin: 0px;
+}
+
+#pane-container {
+  height: calc(100vh - var(--nav-bar-height));
+  display: flex;
+}
+
+#pane-container-children {
+  display: flex;
+  transform-origin: top left;
+}
+
+#show-add-pane-popup {
+  margin: 1em;
+}
+
+.pane-controller-holder {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 1em;
+  background-color: whitesmoke;
+}
+
+.pane-controller-holder > div {
+  align-items: center;
+  display: flex;
+}
+
+.pane-controls-icon {
+  height: 1em;
+  padding: 0.5em;
+  cursor: pointer;
+  transition: all 0.75s ease;
+}
+
+.pane-controls-icon:hover {
+  background-color: rgb(202, 202, 202);
+}
+
+.pane-item {
+  height: 700px;
+  width: 300px;
+  /* scale: 0.75; */
+  margin: 1em;
+  border: solid rgb(200, 200, 200) 0.1em;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+
+.pane-item > iframe {
+  height: 95%;
+  width: 100%;
+  border: none;
+}
+
+.hidden {
+  opacity: 0;
+  height: 0px;
+  transition: opacity 0.75s ease;
+}
+
+.visible {
+  opacity: 1;
+  height: 100vh;
+  transition: opacity 0.75s ease;
+}
+
+.popup {
+  position: fixed;
+  width: 100vw;
+  background-color: rgba(128, 128, 128, 0.512);
+  z-index: 2;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#main-container {
+  margin-top: var(--nav-bar-height);
+}
