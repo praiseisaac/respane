@@ -42,6 +42,7 @@ window.onload = () => {
     }
     )}
     `
+    document.getElementById("pane-container-children").style.transform = `scale(${parseInt(document.getElementById("pane-scale-slider").value) / 100})`;
 }
 
 
